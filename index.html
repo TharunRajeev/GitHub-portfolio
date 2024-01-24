@@ -15,12 +15,15 @@
             <div class="container">
                 <nav>
                     <img src="Pictures/logo.png" class="logo">
-                    <ul>
-                        <li><a href ="#">Home</a></li>
-                        <li><a href ="#">About</a></li>
-                        <li><a href ="#">Services</a></li>
-                        <li><a href ="#">Contact</a></li>
+                    <ul id="sidemenu">
+                        <li><a href ="#header">Home</a></li>
+                        <li><a href ="#about">About</a></li>
+                        <li><a href ="#services">Services</a></li>
+                        <li><a href ="#portfolio">Portfolio</a></li>
+                        <li><a href ="#contact">Contact</a></li>
+                        <i class="fas fa-regular fa-circle-xmark" onclick="closeMenu()"></i>
                     </ul>
+                    <i class=" fas fa-solid fa-bars" onclick="openMenu()"></i>
                 </nav>
                 <div class="header-text">
                      <p>Software Engineer</p>
@@ -99,6 +102,69 @@
         </div>
     </div>
 </div>
+<!---------------Portfolio----------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Pictures/work-1.png">
+                <div class="layer">
+                    <h3>Social Media</h3>
+                    <p>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Pictures/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Pictures/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Name</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> tharunrajeev29@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 562-719-1094</p>
+                <div class="social-icons">
+                   <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                   <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                   <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="Tharun _CV.pdf" download class=" btn btn-2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="message" row="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn-2">Submit</button> 
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Tharun Rajeev.</p>
+    </div>
+</div>
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
@@ -113,6 +179,31 @@
                 document.getElementById(tabname).classList.add("active-tab");
             }
         </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openMenu(){
+                sidemenu.style.right = "0";
+            }
+            function closeMenu(){
+                sidemenu.style.right = "-140px";
+            }
+        </script>
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby_NkI9uOOjHaAhFvGMgmni3LFv6kjbSl7xngztWTXR3sgPPQjfaPx2MQ1DYQv-szgOfA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg");
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully";
+                    setTimeout(function(){
+                        msg.innerHTML = "";
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </body>
-
 </html>
