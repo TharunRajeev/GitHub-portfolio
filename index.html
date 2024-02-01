@@ -1,209 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
-        <title>
-            Tharun Rajeev
-        </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <script src="https://kit.fontawesome.com/eb4769840e.js" crossorigin="anonymous"></script>
-    <body>
-        <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="Pictures/logo.png" class="logo">
-                    <ul id="sidemenu">
-                        <li><a href ="#header">Home</a></li>
-                        <li><a href ="#about">About</a></li>
-                        <li><a href ="#services">Services</a></li>
-                        <li><a href ="#portfolio">Portfolio</a></li>
-                        <li><a href ="#contact">Contact</a></li>
-                        <i class="fas fa-regular fa-circle-xmark" onclick="closeMenu()"></i>
-                    </ul>
-                    <i class=" fas fa-solid fa-bars" onclick="openMenu()"></i>
-                </nav>
-                <div class="header-text">
-                     <p>Software Engineer</p>
-                     <h1>Hi, I'm Tharun Rajeev</h1>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Tharun Rajeev</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">John Doe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      <!--- -----------about------------- -->
-         
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1"> 
-                        <img src="Pictures/aboutme.jpeg">
-                    </div>
-                    <div class="about-col-2"> 
-                        <h1 class="subtitle">About me</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                            <p class="tab-links" onclick="openTab('experience')">Work Experience</p>
-                            <p class="tab-links" onclick="openTab('education')">Education</p> 
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul><li><span>Web Development</span><br>Designing websites and desktop applications</li></ul>
-                            <ul><li><span>Python</span><br>Data analysis and Data science</li></ul>
-                            <ul><li><span>Desktop Application</span><br>Designing and architecting Desktop applictions in C#</li></ul>
-                            <ul><li><span>App Development</span><br>Designing Android and IOS applications</li></ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul><li><span>Dec 2023 - Present</span><br>Director of Correspondence-International Student Association at CSULB</li></ul>
-                            <ul><li><span>Jan 2021 - Jul 2023</span><br>Software Engineer at One Advanced</li></ul>
-                            <ul><li><span>Dec 2021 - Dec 2021</span><br>Data Analyst Intern at JSW Steels</li></ul>
-                            <ul><li><span>Jun 2019 - Jun 2019</span><br>Data Analyst Intern at Tata Technologies</li></ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul><li><span>Aug 2023 - Present</span><br>California State University - Long Beach</li></ul>
-                            <ul><li><span>Jun 2017 - Jul 2021</span><br>SRM Institute of Science and Technology</li></ul>
-                            <ul><li><span>Jun 2015 - Jun 2017</span><br>Shri. TP Bhatia College Of Science</li></ul>
-                            <ul><li><span>May 2003 - Jun 2015</span><br>Dr. Sarvepalli Radhekrishnan Vidyalaya</li></ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
-
-<!------------ services ----------------->
-<div id="services">
-    <div class="container">
-        <h1 class ="subtitle"> My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2 class="h2">Web Design</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <a href="#"> Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-desktop"></i>
-                <h2 class="h2">Desktop App Design</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <a href="#"> Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                <h2 class="h2">Data Analysis and DashBoard Creations</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <a href="#"> Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-video"></i>
-                <h2 class="h2">Cinematography</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    <a href="#"> Learn more</a>
-            </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Tharun Rajeev profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Tharun Rajeev</h1>
+        <p class="section__text__p2">Full Stack Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
         </div>
-    </div>
-</div>
-<!---------------Portfolio----------------->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="subtitle">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="Pictures/work-1.png">
-                <div class="layer">
-                    <h3>Social Media</h3>
-                    <p>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="Pictures/work-2.png">
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="Pictures/work-3.png">
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/tharun-rajeev-5b38961b6'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/TharunRajeev'"
+          />
         </div>
-        <a href="#" class="btn">See More</a>
-    </div>
-</div>
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="subtitle">Contact Name</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> tharunrajeev29@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> 562-719-1094</p>
-                <div class="social-icons">
-                   <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                   <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                   <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                   <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-                <a href="Tharun _CV.pdf" download class=" btn btn-2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="text" name="email" placeholder="Your Email" required>
-                    <textarea name="message" row="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn-2">Submit</button> 
-                </form>
-                <span id="msg"></span>
-            </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.JPEG"
+            alt="Profile picture"
+            class="about-pic"
+          />
         </div>
-    </div>
-    <div class="copyright">
-        <p>Copyright © Tharun Rajeev.</p>
-    </div>
-</div>
-        <script>
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
-            function openTab(tabname) {
-                for (tablink of tablinks){
-                    tablink.classList.remove("active-link");
-                }
-                for (tabcontent of tabcontents) {
-                    tabcontent.classList.remove("active-tab"); 
-                }
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
-            }
-        </script>
-        <script>
-            var sidemenu = document.getElementById("sidemenu");
-            function openMenu(){
-                sidemenu.style.right = "0";
-            }
-            function closeMenu(){
-                sidemenu.style.right = "-140px";
-            }
-        </script>
-          <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycby_NkI9uOOjHaAhFvGMgmni3LFv6kjbSl7xngztWTXR3sgPPQjfaPx2MQ1DYQv-szgOfA/exec'
-            const form = document.forms['submit-to-google-sheet']
-            const msg = document.getElementById("msg");
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully";
-                    setTimeout(function(){
-                        msg.innerHTML = "";
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
-    </body>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Software Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p> Bachelors in Information Technology<br />Masters in Computer Science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+            Im a dynamic and detail-oriented Computer Science graduate pursuing a Master's at California State University, Long Beach, showcases a robust technical background with a BTech in Information Technology from SRM Institute of Technology, India. As a forward-thinking Software Engineer at Advanced Business and Healthcare Solutions,I significantly optimized API integrations, reduced application build times, and enhanced development productivity. My expertise spans a diverse set of programming languages, web technologies, and software tools, coupled with hands-on experience in data analysis and IoT-based water quality monitoring projects. Certified in AWS and proficient in various data science strategies, I combine technical prowess with strong soft skills, making me an ideal candidate for a Software Engineering Internship. My leadership roles in extracurricular activities and accolades in hackathons underscore his commitment to innovation and problem-solving.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Software Engineer</h2>
+            <h3 class="company">at One Advanced</h3>
+            <div class="article-container">
+              <span class="article-detail">
+                <ul>
+                  <li>Designed, developed, and reviewed APIs for ALB Desktop to interact with third-party application endpoints replacing the previous integrations resulting in a decrease in operational cost by 18%.
+                  </li>
+                  <li>Migrated Desktop application to cloud using WiseJ technology.</li>
+                  <li>Reduced application build time in Jenkins pipeline from 3-4 hours to 20 mins by avoiding unnecessary dependency
+                    downloads and redundant DLL checks</li>
+                  <li>Created Common reusable components with additional features bound to UI elements, thus increasing development
+                    productivity.</li>
+                </ul>
+              </span>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>HTML/CSS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>JavaScript<br> C#</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>.net Framework</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Amazon Web Services</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>Microsoft Azure</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>React JS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>SQL</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                  />
+                  <div>
+                    <h3>CI/CD Pipelines</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Analyst Intern at JSW Steels.</h2>
+            <div class="article-container">
+              <span class="article-detail">
+                <ul>
+                  <li>Executed Data mining, Web scraping, and Atomizing web pages using Selenium to ease manual operation.
+                  </li>
+                  <li>Utilized Pandas, NumPy, Matplotlib, Seaborn, and Ipy widgets for dealing with data, year and month-wise from
+                    the Ministry of commerce.</li>
+                  <li>Extracted import, and export data from the Ministry of Commerce and provided insights into steel and raw
+                    material using interactive graphs and plots. Employed Mime type, SSL, HTTP. Client to request data from website and store them in excel files.</li>
+                </ul>
+              </span>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Web Scraping</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Data mining</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Pandas</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Machine Learning</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Ipy Widgets</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Seaborn</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Http Client</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Analyst Intern at Tata Technologies.</h2>
+            <div class="article-container">
+              <span class="article-detail">
+                <ul>
+                  <li>Carried out Data analysis using pandas, NumPy, and Matplotlib to analyze operational performance data in Excel to extrapolate and provided insights and graphs for decision-making.</li>
+                  <li>Analysed month-wise employment performance based on tickets resolved and incident analysis. Stored data in Excel files and graphs in .png files to use them in internal discussions and Retrospectives.</li>
+                </ul>
+              </span>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Pandas</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>OpenCV, Matplotlib</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Numpy</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Matplotlib</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Jupyter Notebook</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Social Cop</h2>
+            <span class="project-details">
+              <ul>
+                <li>Developed an Android app with Node.js serving as the backend, utilizing MongoDB as the database and AWS S3 for storage.</li>
+                <li>Facilitated resolution of road-related issues, such as faulty signals, traffic jams, puddles, garbage, and accidents, through an application enabling users to capture images and locations.</li>
+                <li>Uploaded data to a centralized portal for authorities, incorporating Java for UI design, S3 for storage, and MongoDB for structured data storage. Automated email notifications to relevant officials based on the nature of the submitted complaints via SMTP.</li>
+              </ul>
+            </span>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/TharunRajeev?tab=repositories'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/social-cop.pdf')"
+              >
+                Documentation
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.jpeg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Wired water quality monitoring system using machine learning</h2>
+            <span class="project-details">
+            <ul>
+              <li>Monitored the pH, temperature, conductivity, and turbidity at water distribution to measure water quality and possible reasons for quality deterioration using IoT devices and Machine learning.</li>
+              <li>Integrated temperature, conductivity sensors, etc. with the Arduino Uno using Java to collect data produced by the sensors into the system at regular intervals.</li>
+              <li>Wrote python code on Jupyter Notebook using packages such as pandas, and Nu</li>
+            </ul>  
+            </span>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/WIRED SENSOR SYSTEMS FOR WATER QUALITY MONITORING.pdf')"
+              >
+                Documentation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:tharunrajeev29@gmail.com">tharunrajeev29@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/tharun-rajeev-5b38961b6">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Tharun Rajeev. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
