@@ -335,6 +335,33 @@ section {
     margin-bottom: 10px;
   }
 }
+.about-containers div:focus{
+  background: #ff9900;
+  transform: translateY(-10px);
+  .experience-sub-title{
+    color: rgb(14, 36, 36);
+  }
+  .article-container .article-detail{
+    display: block;
+    color: rgba(236, 222, 222, 0.894);
+  } 
+  .company{
+    color: rgb(14, 36, 36);
+    margin-bottom: 10px;
+  }
+  .article-container div,img{
+    display: none;
+  }
+  .project-details{
+    display:block;
+    color: azure;
+    font-weight: 100;
+    margin-bottom: 20px;
+  }
+  .experience-sub-title.project-title{
+    margin-bottom: 10px;
+  }
+}
 .section-container {
   gap: 4rem;
   height: 80%;
