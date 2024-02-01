@@ -316,11 +316,11 @@ section {
   }
   .article-container .article-detail{
     display: block;
-    margin-top: 20px;
     color: rgba(236, 222, 222, 0.894);
   } 
   .company{
     color: rgb(14, 36, 36);
+    margin-bottom: 10px;
   }
   .article-container div,img{
     display: none;
@@ -329,8 +329,10 @@ section {
     display:block;
     color: azure;
     font-weight: 100;
-    margin-top: 20px;
     margin-bottom: 20px;
+  }
+  .experience-sub-title.project-title{
+    margin-bottom: 10px;
   }
 }
 .section-container {
