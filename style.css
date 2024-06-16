@@ -309,7 +309,7 @@ section {
 }
 
 .about-containers div:hover{
-  background: #ff9900;
+  background: #a2bcff;
   transform: translateY(-10px);
   .experience-sub-title{
     color: rgb(14, 36, 36);
